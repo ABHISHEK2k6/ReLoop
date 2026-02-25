@@ -53,12 +53,12 @@ export default function Hero({ mode }) {
 
   return (
     <section 
-      className="grid grid-cols-1 md:grid-cols-2 gap-12 px-12 py-20 pb-16 max-md:px-5 max-md:py-12 max-md:gap-8"
+      className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 px-4 md:px-12 py-12 md:py-20 md:pb-16"
       style={{
         background: 'radial-gradient(ellipse 60% 60% at 15% 50%, rgba(46,204,113,0.06) 0%, transparent 70%)'
       }}
     >
-      <div className="flex flex-col justify-center gap-6">
+      <div className="flex flex-col justify-center gap-4 md:gap-6">
         <div 
           className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase w-fit border ${
             isGiver 
@@ -68,7 +68,7 @@ export default function Hero({ mode }) {
         >
           {isGiver ? '♻️ Giver Portal' : '🏭 Buyer Portal'}
         </div>
-        <h1 className="font-display font-extrabold text-[clamp(32px,4vw,54px)] leading-[1.1] tracking-tight text-text-primary">
+        <h1 className="font-display font-extrabold text-[clamp(28px,8vw,54px)] leading-[1.1] tracking-tight text-text-primary">
           {isGiver ? (
             <>
               Turn Your Waste<br />Into <span className="text-[var(--accent)]">Impact</span>
@@ -79,7 +79,7 @@ export default function Hero({ mode }) {
             </>
           )}
         </h1>
-        <p className="text-text-secondary text-base font-light max-w-[460px] leading-[1.7]">
+        <p className="text-text-secondary text-sm md:text-base font-light max-w-[460px] leading-[1.7]">
           {isGiver
             ? 'List your recyclable or electronic waste. Vetted recycling companies collect it — at no cost to you.'
             : 'Post your material demands and connect with a consistent pipeline of verified waste suppliers across the country.'
@@ -88,40 +88,40 @@ export default function Hero({ mode }) {
         <div className="flex gap-3 flex-wrap">
           {isGiver ? (
             <>
-              <button className="px-7 py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-green text-white hover:bg-green-dark hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(46,204,113,0.3)]">
+              <button className="px-5 md:px-7 py-3 md:py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-green text-white hover:bg-green-dark hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(46,204,113,0.3)]">
                 Post a Listing →
               </button>
-              <button className="px-7 py-3.5 rounded-full bg-transparent border border-dark-border text-text-secondary font-medium text-sm cursor-pointer transition-all duration-200 hover:border-text-secondary hover:text-text-primary">
+              <button className="px-5 md:px-7 py-3 md:py-3.5 rounded-full bg-transparent border border-dark-border text-text-secondary font-medium text-sm cursor-pointer transition-all duration-200 hover:border-text-secondary hover:text-text-primary">
                 See How It Works
               </button>
             </>
           ) : (
             <>
-              <button className="px-7 py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-amber text-white hover:bg-[#d4880e] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(243,156,18,0.3)]">
+              <button className="px-5 md:px-7 py-3 md:py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-amber text-white hover:bg-[#d4880e] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(243,156,18,0.3)]">
                 Post a Demand →
               </button>
-              <button className="px-7 py-3.5 rounded-full bg-transparent border border-dark-border text-text-secondary font-medium text-sm cursor-pointer transition-all duration-200 hover:border-text-secondary hover:text-text-primary">
+              <button className="px-5 md:px-7 py-3 md:py-3.5 rounded-full bg-transparent border border-dark-border text-text-secondary font-medium text-sm cursor-pointer transition-all duration-200 hover:border-text-secondary hover:text-text-primary">
                 Browse Supply
               </button>
             </>
           )}
         </div>
       </div>
-      <div className="grid grid-cols-3 gap-px bg-dark-border rounded-2xl overflow-hidden border border-dark-border self-start">
-        <div className="bg-dark-card px-6 pt-5 pb-5 flex flex-col gap-1">
-          <div className={`font-display font-bold text-[28px] leading-none ${isGiver ? 'text-green' : 'text-amber'}`}>
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-dark-border rounded-2xl overflow-hidden border border-dark-border self-start">
+        <div className="bg-dark-card px-4 md:px-6 pt-5 pb-5 flex flex-col gap-1">
+          <div className={`font-display font-bold text-[24px] md:text-[28px] leading-none ${isGiver ? 'text-green' : 'text-amber'}`}>
             <AnimatedCounter value={stats.totalListings} trigger={mode} />
           </div>
           <div className="text-xs text-text-secondary mt-1">Active Listings</div>
         </div>
-        <div className="bg-dark-card px-6 pt-5 pb-3 flex flex-col gap-1">
-          <div className={`font-display font-bold text-[28px] leading-none ${isGiver ? 'text-green' : 'text-amber'}`}>
+        <div className="bg-dark-card px-4 md:px-6 pt-5 pb-3 flex flex-col gap-1">
+          <div className={`font-display font-bold text-[24px] md:text-[28px] leading-none ${isGiver ? 'text-green' : 'text-amber'}`}>
             <AnimatedCounter value={stats.materialsDiverted} trigger={mode} />
           </div>
           <div className="text-xs text-text-secondary mt-1">Materials Diverted</div>
         </div>
-        <div className="bg-dark-card px-6 pt-5 pb-3 flex flex-col gap-1">
-          <div className={`font-display font-bold text-[28px] leading-none ${isGiver ? 'text-green' : 'text-amber'}`}>
+        <div className="bg-dark-card px-4 md:px-6 pt-5 pb-3 flex flex-col gap-1">
+          <div className={`font-display font-bold text-[24px] md:text-[28px] leading-none ${isGiver ? 'text-green' : 'text-amber'}`}>
             <AnimatedCounter value={isGiver ? stats.verifiedBuyers : stats.verifiedSuppliers} trigger={mode} />
           </div>
           <div className="text-xs text-text-secondary mt-1">{isGiver ? 'Verified Buyers' : 'Verified Suppliers'}</div>

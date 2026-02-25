@@ -16,6 +16,7 @@ const syne = Syne({
 export const metadata = {
   title: 'ReLoop — Waste Exchange Platform',
   description: 'Connecting waste generators with recycling buyers. Turn your waste into impact.',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=5',
 };
 
 export default function RootLayout({ children }) {

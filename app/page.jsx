@@ -88,8 +88,8 @@ export default function ReLoopApp() {
       <Hero mode={activeTab} />
 
       {/* PORTAL SECTION */}
-      <section className="px-12 pb-15 max-md:px-5">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-md:grid-cols-1">
+      <section className="px-4 md:px-12 pb-12 md:pb-15">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-6">
           {/* LEFT: FORM */}
           {isGiver ? (
             <GiverForm
@@ -110,7 +110,7 @@ export default function ReLoopApp() {
           )}
 
           {/* RIGHT: MAP + FEED */}
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-4 md:gap-5">
             <MapPanel mode={activeTab} />
             <FeedPanel items={feed} accent={activeTab} title={feedTitle} />
           </div>

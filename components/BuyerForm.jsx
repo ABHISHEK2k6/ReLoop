@@ -13,10 +13,10 @@ export default function BuyerForm({
   };
 
   return (
-    <div className="bg-dark-card border border-dark-border rounded-2xl p-7 flex flex-col gap-5">
+    <div className="bg-dark-card border border-dark-border rounded-2xl p-5 md:p-7 flex flex-col gap-4 md:gap-5">
       <div>
-        <div className="font-display font-bold text-lg text-text-primary">Post a Material Demand</div>
-        <div className="text-[13px] text-text-secondary -mt-3">Tell us what you need and we&apos;ll surface the right supply.</div>
+        <div className="font-display font-bold text-base md:text-lg text-text-primary">Post a Material Demand</div>
+        <div className="text-[13px] text-text-secondary mt-2 md:-mt-3">Tell us what you need and we&apos;ll surface the right supply.</div>
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -39,7 +39,7 @@ export default function BuyerForm({
         />
       </div>
 
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="flex flex-col gap-1.5">
           <label className="text-xs font-medium text-text-secondary tracking-wide">Min. Quantity</label>
           <input
@@ -98,7 +98,7 @@ export default function BuyerForm({
       </div>
 
       <button
-        className="w-full px-7 py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-amber text-white hover:bg-[#d4880e] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(243,156,18,0.3)]"
+        className="w-full px-5 md:px-7 py-3 md:py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-amber text-white hover:bg-[#d4880e] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(243,156,18,0.3)]"
         onClick={onSubmit}
       >
         Post Demand →

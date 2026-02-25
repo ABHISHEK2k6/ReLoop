@@ -13,10 +13,10 @@ export default function GiverForm({
   };
 
   return (
-    <div className="bg-dark-card border border-dark-border rounded-2xl p-7 flex flex-col gap-5">
+    <div className="bg-dark-card border border-dark-border rounded-2xl p-5 md:p-7 flex flex-col gap-4 md:gap-5">
       <div>
-        <div className="font-display font-bold text-lg text-text-primary">Post a Waste Listing</div>
-        <div className="text-[13px] text-text-secondary mt-3">Tell us what you have and where it is.</div>
+        <div className="font-display font-bold text-base md:text-lg text-text-primary">Post a Waste Listing</div>
+        <div className="text-[13px] text-text-secondary mt-2 md:mt-3">Tell us what you have and where it is.</div>
       </div>
 
       <div className="flex flex-col gap-1.5">
@@ -61,7 +61,7 @@ export default function GiverForm({
 
       <div className="flex flex-col gap-1.5">
         <div className="text-xs font-medium text-text-secondary tracking-wide">Upload Photos</div>
-        <div className="border-2 border-dashed border-dark-border rounded-[10px] p-7 text-center cursor-pointer transition-all duration-200 bg-dark hover:border-[var(--accent)] hover:bg-[var(--accent-glow)]">
+        <div className="border-2 border-dashed border-dark-border rounded-[10px] p-5 md:p-7 text-center cursor-pointer transition-all duration-200 bg-dark hover:border-[var(--accent)] hover:bg-[var(--accent-glow)]">
           <div className="text-[28px] mb-2">📷</div>
           <div className="text-[13px] text-text-secondary">Drag & drop photos here</div>
           <div className="text-[11px] text-text-muted mt-1">PNG, JPG up to 10MB each</div>
@@ -79,7 +79,7 @@ export default function GiverForm({
       </div>
 
       <button
-        className="w-full px-7 py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-green text-white hover:bg-green-dark hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(46,204,113,0.3)]"
+        className="w-full px-5 md:px-7 py-3 md:py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-green text-white hover:bg-green-dark hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(46,204,113,0.3)]"
         onClick={onSubmit}
       >
         Post Listing →
