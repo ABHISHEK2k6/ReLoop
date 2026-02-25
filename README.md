@@ -1,6 +1,6 @@
-# ReLoop — Waste Exchange Platform Prototype
+# ReWaste — Waste Exchange Platform Prototype
 
-This is a prototype of the ReLoop Waste Exchange Platform, connecting waste generators with recycling buyers.
+This is a prototype of the ReWaste Waste Exchange Platform, connecting waste generators with recycling buyers.
 
 ## Getting Started
 

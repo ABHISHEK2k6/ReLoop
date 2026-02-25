@@ -10,7 +10,7 @@ import HowItWorks from '@/components/HowItWorks';
 import Footer from '@/components/Footer';
 import { giverListings, buyerListings, giverSteps, buyerSteps } from '@/lib/constants';
 
-export default function ReLoopApp() {
+export default function ReWasteApp() {
   const [activeTab, setActiveTab] = useState('giver');
   const [selectedTypes, setSelectedTypes] = useState([]);
   const [buyerTypes, setBuyerTypes] = useState([]);
