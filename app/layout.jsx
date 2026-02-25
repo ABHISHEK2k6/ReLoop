@@ -1,4 +1,17 @@
 import './globals.css';
+import { DM_Sans, Syne } from 'next/font/google';
+
+const dmSans = DM_Sans({ 
+  subsets: ['latin'],
+  weight: ['300', '400', '500'],
+  variable: '--font-dm-sans',
+});
+
+const syne = Syne({ 
+  subsets: ['latin'],
+  weight: ['600', '700', '800'],
+  variable: '--font-syne',
+});
 
 export const metadata = {
   title: 'ReLoop — Waste Exchange Platform',
@@ -7,12 +20,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`${dmSans.variable} ${syne.variable}`}>
       <body>{children}</body>
     </html>
   );

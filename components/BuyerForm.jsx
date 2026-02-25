@@ -16,7 +16,7 @@ export default function BuyerForm({
     <div className="panel">
       <div>
         <div className="panel-title">Post a Material Demand</div>
-        <div className="panel-subtitle">Tell us what you need and we'll surface the right supply.</div>
+        <div className="panel-subtitle">Tell us what you need and we&apos;ll surface the right supply.</div>
       </div>
 
       <div className="field-group">
