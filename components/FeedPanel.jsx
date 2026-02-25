@@ -1,22 +1,27 @@
 export default function FeedPanel({ items, accent, title }) {
   return (
-    <div className="feed-panel">
-      <div className="feed-header">
-        <div className="feed-title">{title}</div>
-        <div className="feed-live">
-          <div className="live-dot" />
+    <div className="bg-dark-card border border-dark-border rounded-2xl p-5 flex flex-col gap-3">
+      <div className="flex justify-between items-center">
+        <div className="font-display font-bold text-[15px]">{title}</div>
+        <div className="flex items-center gap-1.5 text-[11px] text-text-secondary">
+          <div className="w-1.5 h-1.5 rounded-full bg-green animate-pulse" />
           Live
         </div>
       </div>
       {items.map((item) => (
-        <div className="listing-card" key={item.id}>
-          <div className="listing-icon">{item.icon}</div>
-          <div className="listing-info">
-            <div className="listing-title">{item.title}</div>
-            <div className="listing-meta">{item.meta}</div>
+        <div 
+          className="flex gap-3 items-start p-3 bg-dark rounded-[10px] border border-dark-border transition-colors duration-200 cursor-pointer hover:border-[var(--accent)]"
+          key={item.id}
+        >
+          <div className="text-xl shrink-0 mt-0.5">{item.icon}</div>
+          <div className="flex-1 min-w-0">
+            <div className="font-medium text-[13px] text-text-primary whitespace-nowrap overflow-hidden text-ellipsis">
+              {item.title}
+            </div>
+            <div className="text-[11px] text-text-secondary mt-0.5">{item.meta}</div>
           </div>
           <div
-            className="listing-tag"
+            className="px-2.5 py-0.5 rounded-full text-[11px] font-medium shrink-0"
             style={{
               background: `${item.tagColor}18`,
               color: item.tagColor,

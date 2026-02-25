@@ -13,14 +13,14 @@ export default function BuyerForm({
   };
 
   return (
-    <div className="panel">
+    <div className="bg-dark-card border border-dark-border rounded-2xl p-7 flex flex-col gap-5">
       <div>
-        <div className="panel-title">Post a Material Demand</div>
-        <div className="panel-subtitle">Tell us what you need and we&apos;ll surface the right supply.</div>
+        <div className="font-display font-bold text-lg text-text-primary">Post a Material Demand</div>
+        <div className="text-[13px] text-text-secondary -mt-3">Tell us what you need and we&apos;ll surface the right supply.</div>
       </div>
 
-      <div className="field-group">
-        <div className="field-label">Material Types Needed</div>
+      <div className="flex flex-col gap-1.5">
+        <div className="text-xs font-medium text-text-secondary tracking-wide">Material Types Needed</div>
         <WasteChips
           types={WASTE_TYPES}
           selected={selectedTypes}
@@ -29,30 +29,30 @@ export default function BuyerForm({
         />
       </div>
 
-      <div className="field-group">
-        <label className="field-label">Company Name</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-xs font-medium text-text-secondary tracking-wide">Company Name</label>
         <input
-          className="field-input"
+          className="bg-dark border border-dark-border rounded-[10px] px-3.5 py-[11px] text-text-primary text-sm outline-none transition-colors duration-200 w-full focus:border-[var(--accent)] placeholder:text-text-muted"
           placeholder="e.g. GreenCore Recycling Ltd."
           value={formData.company}
           onChange={(e) => handleInputChange('company', e.target.value)}
         />
       </div>
 
-      <div className="two-col">
-        <div className="field-group">
-          <label className="field-label">Min. Quantity</label>
+      <div className="grid grid-cols-2 gap-3">
+        <div className="flex flex-col gap-1.5">
+          <label className="text-xs font-medium text-text-secondary tracking-wide">Min. Quantity</label>
           <input
-            className="field-input"
+            className="bg-dark border border-dark-border rounded-[10px] px-3.5 py-[11px] text-text-primary text-sm outline-none transition-colors duration-200 w-full focus:border-[var(--accent)] placeholder:text-text-muted"
             placeholder="e.g. 50 kg"
             value={formData.min}
             onChange={(e) => handleInputChange('min', e.target.value)}
           />
         </div>
-        <div className="field-group">
-          <label className="field-label">Max. Quantity</label>
+        <div className="flex flex-col gap-1.5">
+          <label className="text-xs font-medium text-text-secondary tracking-wide">Max. Quantity</label>
           <input
-            className="field-input"
+            className="bg-dark border border-dark-border rounded-[10px] px-3.5 py-[11px] text-text-primary text-sm outline-none transition-colors duration-200 w-full focus:border-[var(--accent)] placeholder:text-text-muted"
             placeholder="e.g. 500 kg"
             value={formData.max}
             onChange={(e) => handleInputChange('max', e.target.value)}
@@ -60,20 +60,20 @@ export default function BuyerForm({
         </div>
       </div>
 
-      <div className="field-group">
-        <label className="field-label">Preferred Location / Region</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-xs font-medium text-text-secondary tracking-wide">Preferred Location / Region</label>
         <input
-          className="field-input"
+          className="bg-dark border border-dark-border rounded-[10px] px-3.5 py-[11px] text-text-primary text-sm outline-none transition-colors duration-200 w-full focus:border-[var(--accent)] placeholder:text-text-muted"
           placeholder="e.g. Greater London, Midlands"
           value={formData.region}
           onChange={(e) => handleInputChange('region', e.target.value)}
         />
       </div>
 
-      <div className="field-group">
-        <label className="field-label">Price Range (per kg)</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-xs font-medium text-text-secondary tracking-wide">Price Range (per kg)</label>
         <select
-          className="field-input"
+          className="bg-dark border border-dark-border rounded-[10px] px-3.5 py-[11px] text-text-primary text-sm outline-none transition-colors duration-200 w-full focus:border-[var(--accent)] appearance-none cursor-pointer"
           value={formData.price}
           onChange={(e) => handleInputChange('price', e.target.value)}
         >
@@ -86,10 +86,10 @@ export default function BuyerForm({
         </select>
       </div>
 
-      <div className="field-group">
-        <label className="field-label">Contact Email</label>
+      <div className="flex flex-col gap-1.5">
+        <label className="text-xs font-medium text-text-secondary tracking-wide">Contact Email</label>
         <input
-          className="field-input"
+          className="bg-dark border border-dark-border rounded-[10px] px-3.5 py-[11px] text-text-primary text-sm outline-none transition-colors duration-200 w-full focus:border-[var(--accent)] placeholder:text-text-muted"
           type="email"
           placeholder="procurement@company.com"
           value={formData.contact}
@@ -98,8 +98,7 @@ export default function BuyerForm({
       </div>
 
       <button
-        className="btn-primary btn-amber"
-        style={{ width: '100%', padding: '14px', background: 'var(--amber)' }}
+        className="w-full px-7 py-3.5 rounded-full border-none cursor-pointer font-medium text-sm transition-all duration-200 whitespace-nowrap bg-amber text-white hover:bg-[#d4880e] hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(243,156,18,0.3)]"
         onClick={onSubmit}
       >
         Post Demand →
